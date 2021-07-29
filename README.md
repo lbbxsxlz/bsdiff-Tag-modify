@@ -1,4 +1,4 @@
-# bsdiff-tar-modify
+# bsdiff-tag-modify
 bsdiff-releases-tar.gz  modify
 
 ## origin releases tag
