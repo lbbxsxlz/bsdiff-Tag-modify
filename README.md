@@ -20,3 +20,11 @@ For details see the file titled LICENSE in the project root folder.
 bsdiff oldfile newfile patchfile
 
 bspatch oldfile newfile patchfile
+
+## bzip2 compile
+tar zxvf bzip2-1.0.8.tar.gz;
+cd bzip2-1.0.8;
+patch -p0 < Makefile.patch;
+
+make clean;make CROSS=aarch64-himix210-linux-sd3403v100-v1-
+
