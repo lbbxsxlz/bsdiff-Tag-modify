@@ -26,5 +26,6 @@ tar zxvf bzip2-1.0.8.tar.gz;
 cd bzip2-1.0.8;
 patch -p0 < Makefile.patch;
 
-make clean;make CROSS=aarch64-himix210-linux-sd3403v100-v1-
+make clean;make CROSS=aarch64-himix100v630r3-linux-
+make install PREFIX=/home/bzip2/aarch64-himix100v630r3-linux-
 
