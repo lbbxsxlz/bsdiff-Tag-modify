@@ -28,7 +28,7 @@ cd bzip2-1.0.8;
 
 make clean;make;
 
-## cross compile
+### cross compile
 
 patch -p0 < Makefile.patch;
 
@@ -38,3 +38,7 @@ make install PREFIX=/home/bzip2/aarch64-himix100v630r3-linux-
 
 ## use libbzip.a to compile bspatch
 gcc bspatch-1.c -O3 -I . -L . lib/libbz2.a -o bspatch-1
+
+### cross compile
+make clean;make CROSS=aarch64-himix100v630r3-linux-
+
