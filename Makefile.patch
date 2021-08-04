@@ -4,7 +4,7 @@
  # ------------------------------------------------------------------
  
  SHELL=/bin/sh
-+CROSS:=
++CROSS?=
  
  # To assist in cross-compiling
 -CC=gcc

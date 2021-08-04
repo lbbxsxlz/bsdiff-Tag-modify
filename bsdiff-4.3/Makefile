@@ -1,3 +1,4 @@
+CROSS ?=
 CFLAGS		+=	-O3 -lbz2
 CC = $(CROSS)gcc
 PREFIX		?=	/usr/local
