@@ -10,7 +10,7 @@ bsdiff:		bsdiff.c
 	gcc bsdiff.c -O3 -lbz2 -DBSDIFF_EXECUTABLE -o bsdiff
 bspatch:	bspatch.c
 ifeq ($(CROSS),)
-	gcc bspatch.c -O3 -lbz2 -DBSPATCH_EXECUTABLE -o bspatch
+	$(CC) bspatch.c -O3 -lbz2 -DBSPATCH_EXECUTABLE -o bspatch
 else
 	$(CC) bspatch-1.c -O3 -DBSPATCH_EXECUTABLE -I . -L . lib/$(CROSS)/libbz2.a -o bspatch-1
 	mkdir -p bin/$(CROSS)
