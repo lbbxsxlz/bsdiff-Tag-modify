@@ -36,8 +36,16 @@ make clean;make CROSS=aarch64-himix100v630r3-linux-
 
 make install PREFIX=/home/bzip2/aarch64-himix100v630r3-linux-
 
-## use libbzip.a to compile bspatch
+## use libbzip.a to compile bspatch in bsdiff-4.3
 gcc bspatch-1.c -O3 -I . -L . lib/libbz2.a -o bspatch-1
+
+### cross compile
+make clean;make CROSS=aarch64-himix100v630r3-linux-
+
+
+
+## use libbzip.a to compile bspatch in bsdiff-4.3-endsley
+gcc bspatch-1.c -O3 -DBSPATCH_EXECUTABLE -I . -L . lib/libbz2.a -o bspatch-1
 
 ### cross compile
 make clean;make CROSS=aarch64-himix100v630r3-linux-
